@@ -1,50 +1,93 @@
-# SkyVision - Aplikacja Pogodowa 3D 🌍🌦
+# 🌤️ **SkyVision  - Aplikacja Pogodowa**  
 
-**SkyVision** to nowoczesna aplikacja pogodowa oparta na technologii **PyQt6** i **OpenGL**, która oferuje zaawansowaną wizualizację prognoz w formie interaktywnych modeli 3D Ziemi oraz animacji pogody. Aplikacja wykorzystuje dane z API IMGW do wyświetlania informacji o temperaturze, prędkości wiatru i innych parametrach meteorologicznych.
-
----
-
-## **📋 Spis treści**
-1. [Opis aplikacji](#opis-aplikacji)
-2. [Wymagania](#wymagania)
-3. [Instalacja](#instalacja)
-4. [Użycie](#użycie)
-5. [Struktura plików](#struktura-plików)
-6. [Współpraca](#współpraca)
-7. [Licencja](#licencja)
+SkyVision  to nowoczesna aplikacja pogodowa napisana w **Pythonie** z wykorzystaniem **PyQt6**. Umożliwia użytkownikom sprawdzanie aktualnej pogody dla wybranego miasta, korzystając z danych z **IMGW**.  
 
 ---
 
-## **📌 Opis aplikacji**
+## 📌 **Funkcje**  
 
-**SkyVision** to aplikacja, która umożliwia użytkownikom przeglądanie prognoz pogody w interaktywnej formie 3D. Dzięki zastosowaniu technologii OpenGL i PyQt6 użytkownicy mogą podziwiać trójwymiarowy model Ziemi, na którym wyświetlane są aktualne warunki meteorologiczne. Aplikacja umożliwia:
-- Wyświetlanie globalnego modelu Ziemi z dynamicznymi chmurami i pogodą.
-- Przewidywanie pogody na podstawie danych pobranych z API IMGW.
-- Interaktywne wizualizacje dla różnych miast na świecie.
-- Integrację z wykresami temperatury i innych parametrów pogodowych.
-
----
-
-## **🖥 Wymagania**
-
-Aby uruchomić aplikację, musisz mieć zainstalowane następujące biblioteki:
-- **Python 3.x**
-- **PyQt6**: do tworzenia aplikacji graficznej.
-- **PyOpenGL**: do renderowania grafiki 3D.
-- **Matplotlib**: do tworzenia wykresów.
-- **Requests**: do pobierania danych z API.
-
-Wymagane wersje bibliotek:
-- PyQt6 >= 6.0
-- PyOpenGL >= 3.1.5
-- Matplotlib >= 3.0
-- Requests >= 2.0
+✅ **Prognoza Pogody** – temperatura, prędkość wiatru, ciśnienie atmosferyczne  
+✅ **Minimalistyczny i nowoczesny interfejs** – przejrzysty i intuicyjny design  
+✅ **Motywy kolorystyczne** – jasny i ciemny tryb  
+✅ **Obsługa różnych jednostek** – °C/°F, km/h/m/s, hPa/mmHg  
+✅ **Łatwa instalacja** – działa na **Windows, Linux i macOS**  
+✅ **Dane z IMGW** – aktualne informacje pogodowe  
 
 ---
 
-## **📥 Instalacja**
+## 🛠️ **Technologie**  
 
-1. **Pobierz repozytorium**:
-   ```bash
-   git clone https://github.com/KolegaTatar/SkyVision_desktop
-   cd SkyVision
+🔹 **Python 3** – Główny język programowania  
+🔹 **PyQt6** – Nowoczesny framework GUI  
+🔹 **requests** – Pobieranie danych pogodowych  
+🔹 **QSS (Qt Style Sheets)** – Stylizacja aplikacji  
+
+---
+
+## 🚀 **Instalacja i Uruchomienie**  
+
+### **1️⃣ Sklonuj repozytorium**  
+```bash
+git clone https://github.com/KolegaTatar/SkyVision_desktop
+cd SkyVision 
+```
+
+### **2️⃣ Zainstaluj wymagane biblioteki**  
+Upewnij się, że masz **Python 3** zainstalowany, a następnie:  
+```bash
+pip install -r requirements.txt
+```
+
+### **3️⃣ Uruchom aplikację**  
+```bash
+python main.py
+```
+
+---
+
+## 🎨 **Motywy Interfejsu**  
+
+WeatherPro obsługuje dwa motywy:  
+🌞 **Jasny Motyw** (`styles_light.qss`)  
+🌙 **Ciemny Motyw** (`styles_dark.qss`)  
+
+Motywy można zmieniać w ustawieniach aplikacji.  
+
+---
+
+## 🌍 **Źródło Danych**  
+
+Aplikacja pobiera dane pogodowe z:  
+🔹 **[IMGW](https://danepubliczne.imgw.pl/api/data/synop)** – Polska baza meteorologiczna  
+
+---
+
+## 🛠️ **Struktura Projektu**  
+
+```
+📂 WeatherPro/
+├── 📜 main.py          # Główny plik aplikacji
+├── 📂 api/             # Obsługa API IMGW
+│   ├── imgw_api.py     # Pobieranie danych pogodowych
+├── 📂 ui/              # Interfejs użytkownika
+│   ├── main_window.py  # Główne okno aplikacji
+│   ├── styles.qss      # Stylizacja aplikacji
+├── 📂 utils/           # Dodatkowe funkcje
+│   ├── config.py       # Ustawienia aplikacji
+│   ├── unit_converter.py # Konwersja jednostek
+├── 📜 requirements.txt  # Lista wymaganych bibliotek
+└── 📜 README.md        # Dokumentacja projektu
+```
+
+---
+
+## 👨‍💻 **Autorzy**  
+
+WeatherPro zostało stworzone przez:  
+- **Wiktor Tatarynowicz** – Główny programista  
+
+### 📝 **Współpraca**  
+
+WeatherPro to projekt **open-source**. Jeśli masz pomysły na nowe funkcje lub znalazłeś błąd – zgłoś problem lub zaproponuj zmianę!  
+
+📢 **Dziękujemy za korzystanie z WeatherPro!** 🚀
