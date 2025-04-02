@@ -8,21 +8,31 @@ SkyVision to elegancka i intuicyjna aplikacja do sprawdzania prognozy pogody w c
 - ☀️ Wizualizacja ikon pogodowych i czasu wschodu/zachodu słońca
 - 💨 Informacje o wietrze, widoczności i zachmurzeniu
 - 🎨 Nowoczesny interfejs użytkownika oparty na PyQt6
+- 🎭 Personalizowany wygląd dzięki obsłudze motywów (QSS)
+- 📊 Wykresy pogodowe dla lepszej analizy zmian temperatury
+- 🗺️ Obsługa współrzędnych geograficznych
 
 ## 🖥️ Zrzuty ekranu
 *(Tutaj możesz dodać zrzuty ekranu aplikacji)*
+
+## 🌎 Obsługiwane regiony
+Aplikacja pozwala na sprawdzanie pogody na całym świecie. Możesz uzyskać prognozę dla każdego miasta, podając jego nazwę, np.:
+- 📍 Warszawa, Polska
+- 📍 Nowy Jork, USA
+- 📍 Tokio, Japonia
 
 ## 🔧 Wymagania
 - Python 3.8+
 - PyQt6
 - requests
+- matplotlib (dla wykresów pogodowych)
 
 ## 📦 Instalacja
 
 1. **Sklonuj repozytorium**:
     ```sh
-    git clone https://github.com/twoj-profil/skyvision.git
-    cd skyvision
+    git clone https://github.com/KolegaTatar/SkyVision_desktop.git
+    cd SkyVision_desktop
     ```
 
 2. **Zainstaluj wymagane zależności**:
@@ -42,6 +52,7 @@ skyvision/
 │── weather_service.py      # Pobieranie danych pogodowych z API
 │── ui_components.py        # Interfejs użytkownika
 │── styles2.qss             # Plik stylów aplikacji
+│── charts.py               # Moduł generowania wykresów pogodowych
 │── README.md               # Dokumentacja projektu
 ```
 
@@ -53,8 +64,14 @@ Zmień zmienną `KEY` w pliku `weather_service.py`:
 KEY = "TWOJ_KLUCZ_API"
 ```
 
+## 🏆 Planowane funkcje
+- 📅 Prognoza 7-dniowa
+- 🔔 Powiadomienia o zmianach pogody
+- 🌙 Tryb ciemny dla lepszego komfortu użytkowania
+- 📡 Integracja z innymi źródłami danych pogodowych
+
 ## 🤝 Współpraca
-Chcesz dodać nowe funkcje lub poprawić istniejące? Zapraszamy do współtworzenia! Forkuj repozytorium i twórz Pull Requesty.
+Chcesz dodać nowe funkcje lub poprawić istniejące? Zapraszamy do współtworzenia! Forkuj repozytorium i twórz Pull Requesty. 
 
 ## 📜 Licencja
 Projekt jest dostępny na licencji MIT.
