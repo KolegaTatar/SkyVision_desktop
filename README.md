@@ -51,8 +51,7 @@ skyvision/
 │── main.py                 # Główna logika aplikacji
 │── weather_service.py      # Pobieranie danych pogodowych z API
 │── ui_components.py        # Interfejs użytkownika
-│── styles2.qss             # Plik stylów aplikacji
-│── charts.py               # Moduł generowania wykresów pogodowych
+│── styles.qss             # Plik stylów aplikacji
 │── README.md               # Dokumentacja projektu
 ```
 
