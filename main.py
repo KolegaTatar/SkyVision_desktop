@@ -1,24 +1,31 @@
 import sys
-from PyQt6.QtWidgets import QApplication
-from ui.main_window import WeatherApp
+from PyQt6.QtWidgets import QApplication, QMainWindow
+from ui_components import WeatherUI
+from weather_service import get_weather_data
 
-def load_stylesheet(file_path):
-    """ Wczytuje arkusz stylów QSS """
-    try:
-        with open(file_path, "r") as f:
-            return f.read()
-    except FileNotFoundError:
-        print(f"[ERROR] Nie znaleziono pliku stylów: {file_path}")
-        return ""
+class WeatherApp(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("SkyVision - Prognoza Pogody")
+        self.setGeometry(100, 100, 800, 500)
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
+        # UI components
+        self.weather_ui = WeatherUI(self.search_weather)
+        self.setCentralWidget(self.weather_ui)
+
+    def search_weather(self, city):
+        """Callback to fetch weather data"""
+        return get_weather_data(city)
     
-    # Wczytaj arkusz stylów
-    stylesheet = load_stylesheet("ui/styles.qss")
-    if stylesheet:
-        app.setStyleSheet(stylesheet)
+    def load_styles(self):
+        with open("styles2.qss", "r") as file:
+            self.setStyleSheet(file.read())
 
+def main():
+    app = QApplication(sys.argv)
     window = WeatherApp()
     window.show()
     sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()
