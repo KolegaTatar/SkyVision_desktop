@@ -1,0 +1,17 @@
+QWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                      stop:0 #a1c4fd, stop:1 #c2e9fb);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+QLineEdit, QPushButton {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+#WeatherFrame {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+}

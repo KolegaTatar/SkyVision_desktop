@@ -7,7 +7,7 @@ class WeatherApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("SkyVision - Prognoza Pogody")
-        self.setGeometry(100, 100, 800, 500)
+        self.setGeometry(100, 100, 800, 600)
 
         # UI components
         self.weather_ui = WeatherUI(self.search_weather)
@@ -16,10 +16,6 @@ class WeatherApp(QMainWindow):
     def search_weather(self, city):
         """Callback to fetch weather data"""
         return get_weather_data(city)
-    
-    def load_styles(self):
-        with open("styles2.qss", "r") as file:
-            self.setStyleSheet(file.read())
 
 def main():
     app = QApplication(sys.argv)
