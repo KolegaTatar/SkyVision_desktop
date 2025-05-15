@@ -69,7 +69,4 @@ def get_weather_data(city):
     except ValueError:
         return {"error": "⚠️ Błąd przetwarzania danych. API mogło zwrócić błędną odpowiedź."}
 
-# Przykład użycia
-city = "Warsaw"  # Możesz zmienić to na dowolne miasto
-weather_data = get_weather_data(city)
-print(weather_data["weather_html"])
+
