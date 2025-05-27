@@ -9,12 +9,10 @@ class WeatherApp(QMainWindow):
         self.setWindowTitle("SkyVision - Prognoza Pogody")
         self.setGeometry(100, 100, 800, 600)
 
-        # UI components
         self.weather_ui = WeatherUI(self.search_weather)
         self.setCentralWidget(self.weather_ui)
 
     def search_weather(self, city):
-        """Callback to fetch weather data"""
         return get_weather_data(city)
 
 def main():

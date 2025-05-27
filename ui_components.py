@@ -183,7 +183,7 @@ class WeatherUI(QWidget):
             self.weather_condition.setText("✍️ Podaj miasto.")
 
     def update_weather_ui(self, data):
-        self.city_label.setText(self.city_input.text().strip())
+        self.city_label.setText(f"{data.get('city', '-')}, {data.get('country', '-')}")
         current_time = data.get('current_time', 'brak danych')
         self.time_label.setText(f"Pogoda teraz - dzisiaj godz. {current_time}")
         self.sunrise_label.setText(data.get('sunrise', '-'))
@@ -197,4 +197,5 @@ class WeatherUI(QWidget):
         self.pressure_value.setText(f"{pressure} hPa" if pressure != '-' else "-")
         wind_speed = data.get('wind_speed', '-')
         self.wind_value.setText(f"{wind_speed} km/h" if wind_speed != '-' else "-")
+
 
